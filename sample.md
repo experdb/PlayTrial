@@ -21,3 +21,8 @@ GROUP BY department_id
 HAVING COUNT(*) > 5;
 ```
 이러한 예제들을 실행하기 위해서는 HR 데이터베이스가 설치되어 있어야 합니다.
+
+
+```html
+<a href="https://www.google.co.kr/" target="_blank">GOOGLE</a>
+```
