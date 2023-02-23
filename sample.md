@@ -1,6 +1,6 @@
 # HR 데이터베이스를 사용하는 SQL 실습 예제 
 
-1.  SELECT 문: 특정 `컬럼`을 선택하여 데이터를 출력합니다.
+1.  SELECT 문: 특정 **컬럼**을 선택하여 데이터를 출력합니다.
 ```sql
 SELECT first_name, last_name FROM employees;
 ```
