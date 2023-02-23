@@ -19,7 +19,7 @@ SELECT department_id, COUNT(*) FROM employees
 GROUP BY department_id;
 ```
 4. HAVING 문: GROUP BY 문에서 사용하며 그룹별로 요약된 데이터를 필터링합니다.  
-<button>copy</button>
+<button>copy</button> 
 ```sql
 SELECT department_id, COUNT(*) FROM employees
 GROUP BY department_id
