@@ -5,7 +5,7 @@
 ```sql
 SELECT first_name, last_name FROM employees;
 ```
-![image](https://user-images.githubusercontent.com/91466343/220799288-9b7c22db-2c9f-4089-b065-c70e60b4f906.png)
+![image](https://user-images.githubusercontent.com/91466343/220799288-9b7c22db-2c9f-4089-b065-c70e60b4f906.png)  
 2. JOIN 문: 두 개 이상의 테이블을 연결하여 데이터를 출력합니다.  
 <button>copy</button>  
 ```sql
