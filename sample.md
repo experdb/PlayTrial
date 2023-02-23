@@ -1,6 +1,6 @@
 # HR 데이터베이스를 사용하는 SQL 실습 예제 
 
-1.  SELECT 문: 특정 컬럼을 선택하여 데이터를 출력합니다.
+1.  SELECT 문: 특정 컬럼을 선택하여 데이터를 출력합니다.  
 <button>copy</button>
 ```sql
 SELECT first_name, last_name FROM employees;
@@ -13,13 +13,13 @@ SELECT first_name, last_name, department_name FROM employees
 JOIN departments ON employees.department_id = departments.department_id;
 ```
 3. GROUP BY 문: 특정 컬럼으로 그룹을 묶어 그룹별로 요약된 데이터를 출력합니다.  
-<button>copy</button>  
+<button>copy</button>
 ```sql
 SELECT department_id, COUNT(*) FROM employees
 GROUP BY department_id;
 ```
 4. HAVING 문: GROUP BY 문에서 사용하며 그룹별로 요약된 데이터를 필터링합니다.  
-<button>copy</button>  
+<button>copy</button>
 ```sql
 SELECT department_id, COUNT(*) FROM employees
 GROUP BY department_id
