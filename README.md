@@ -11,7 +11,7 @@
   *마크다운 파일 작성시*  
   *코드 tag 하나당 해당 button 생성*  
   ```
-  <button onclick="copyCode(0)">copy</button>   <!--매개변수는 0, 1, 2 ... 순서대로 넣어줄 -->
+  <button onclick="copyCode(0)">copy</button>   <!--매개변수는 0, 1, 2 ... 순서대로 넣어줄 것-->
     ```sql
     SELECT first_name, last_name FROM employees;  
     ```
