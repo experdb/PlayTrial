@@ -15,7 +15,7 @@
    ```sql
     SELECT first_name, last_name FROM employees;  
     ```
-    ```
+  ```
 
 4. `.md` 파일과 `.sql` 두 개의 파일 URL로 직접적으로 접속할 수 있도록 URL query string parameter 입력
 
