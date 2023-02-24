@@ -7,7 +7,8 @@
 ![image](https://user-images.githubusercontent.com/91466343/219995676-835d753e-5afa-41bf-b2d0-b1f2f85efdee.png)
 
 
-3. `.md` 파일 또는 `.sql` 파일 생성 및 업로드
+3. `.md` 파일 또는 `.sql` 파일 생성 및 업로드  
+  __dddd__
 
 4. `.md` 파일과 `.sql` 두 개의 파일 URL로 직접적으로 접속할 수 있도록 URL query string parameter 입력
 
