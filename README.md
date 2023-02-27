@@ -23,7 +23,8 @@
     ```sql
     SELECT first_name, last_name FROM employees;  
     ```
- ```
+ ```  
+ 
  *이미지 파일 업로드*
     1. Update Files 클릭
     ![image](https://user-images.githubusercontent.com/91466343/221458257-fc3ab3b4-ef2b-406e-9a41-e6e90deeb513.png)  
