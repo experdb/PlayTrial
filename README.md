@@ -8,14 +8,16 @@
 
 
 3. Add file 클릭 => `Create new file`(새로운 파일 생성), `Upload files`(파일 업로드) 택 1
-![image](https://user-images.githubusercontent.com/91466343/219995676-835d753e-5afa-41bf-b2d0-b1f2f85efdee.png)
+![image](https://user-images.githubusercontent.com/91466343/221455708-56216caa-16c4-4f56-8037-d9a6976c4aed.png)  
 
 
 4. `.md` 파일 또는 `.sql` 파일 생성 및 업로드  
-  *마크다운 파일 작성시*  
-  *코드 tag 하나당 해당 button 생성*  
+  
   ```
-  <button onclick="copyCode(0)">copy</button>   <!--매개변수는 0, 1, 2 ... 순서대로 넣어줄 것-->
+  .md 파일 작성시
+  코드 tag 하나당 해당 button 생성
+  <!--매개변수는 0, 1, 2 ... code tag에 맞춰서 넣어줄 것-->
+  <button onclick="copyCode(0)">copy</button>   
     ```sql
     SELECT first_name, last_name FROM employees;  
     ```
@@ -25,7 +27,7 @@
 
   - 파일 URL 추출
     * `Raw` 버튼 클릭 => 해당 URL 복사
-![image](https://user-images.githubusercontent.com/91466343/219995599-1cdc1811-ebd6-4f50-a6cc-4aef8f8f3568.png)
+![image](https://user-images.githubusercontent.com/91466343/221455887-9bf862db-b5b2-4fe8-9e2d-a4e5f07affbb.png)  
 ![image](https://user-images.githubusercontent.com/91466343/219995625-ad4bef59-9d9c-4dae-8462-047c637b0764.png)
 
 
