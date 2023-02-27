@@ -19,8 +19,8 @@
   코드 tag 하나당 해당 button 생성
   매개변수는 0, 1, 2 ... code tag에 맞춰서 넣어줄 것
   
-  <button onclick="copyCode(0)">copy</button>   
-    ```sql
+  <button onclick="copyCode(0)">copy</button>   <!-- Button tag, 매개변수만 변경하여 그대로 작성 -->
+    ```sql    <!-- code tag 작성 -->
     SELECT first_name, last_name FROM employees;  
     ```
  ```  
@@ -50,9 +50,6 @@
     * `Raw` 버튼 클릭 => 해당 URL 복사
 ![image](https://user-images.githubusercontent.com/91466343/221455887-9bf862db-b5b2-4fe8-9e2d-a4e5f07affbb.png)  
 ![image](https://user-images.githubusercontent.com/91466343/221456842-f3026166-a2bd-441e-8419-921bad0ad591.png)
-
-
-
 
 
   - URL query string parameter 입력
