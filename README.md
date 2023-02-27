@@ -20,7 +20,7 @@
   매개변수는 0, 1, 2 ... code tag에 맞춰서 넣어줄 것
   
   <button onclick="copyCode(0)">copy</button>   <!-- Button tag, 매개변수만 변경하여 그대로 작성 -->
-    ```sql    <!-- code tag 작성 -->
+    ```sql                                      <!-- code tag 작성 -->
     SELECT first_name, last_name FROM employees;  
     ```
  ```  
