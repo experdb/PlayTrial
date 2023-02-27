@@ -37,7 +37,8 @@
     ![image](https://user-images.githubusercontent.com/91466343/221458628-22307e10-15cb-4788-ba9c-61278a1f6a9b.png)  
     
     ```
-      ![image](sample.PNG)
+      markdown 파일에 이미지 경로 추가하는 방법
+      ![image](복사한 이미지 경로)
     ```
 
 
