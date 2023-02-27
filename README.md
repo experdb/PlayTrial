@@ -3,11 +3,15 @@
 ### Play Trial 사용자 가이드
 1. eXperDB Play Tiral Github Repo 접속 ( [PLAY TRIAL GITHUB](https://github.com/experdb/PlayTrial)   )
 
-2. Add file 클릭 => `Create new file`(새로운 파일 생성), `Upload files`(파일 업로드) 택 1
+2. Sample URL ( [SAMPLE URL](https://www.postgres-demo.inzent.com/?sql=https://raw.githubusercontent.com/experdb/PlayTrial/main/sample.sql&&md=https://raw.githubusercontent.com/experdb/PlayTrial/main/sample.md) - Sample URL )  
+![image](https://user-images.githubusercontent.com/91466343/221455136-e0693b8e-4629-4be2-93a5-b49be4599d50.png)  
+
+
+3. Add file 클릭 => `Create new file`(새로운 파일 생성), `Upload files`(파일 업로드) 택 1
 ![image](https://user-images.githubusercontent.com/91466343/219995676-835d753e-5afa-41bf-b2d0-b1f2f85efdee.png)
 
 
-3. `.md` 파일 또는 `.sql` 파일 생성 및 업로드  
+4. `.md` 파일 또는 `.sql` 파일 생성 및 업로드  
   *마크다운 파일 작성시*  
   *코드 tag 하나당 해당 button 생성*  
   ```
@@ -17,7 +21,7 @@
     ```
  ```
 
-4. `.md` 파일과 `.sql` 두 개의 파일 URL로 직접적으로 접속할 수 있도록 URL query string parameter 입력
+5. `.md` 파일과 `.sql` 두 개의 파일 URL로 직접적으로 접속할 수 있도록 URL query string parameter 입력
 
   - 파일 URL 추출
     * `Raw` 버튼 클릭 => 해당 URL 복사
@@ -32,9 +36,6 @@
    ```
     https://www.postgres-demo.inzent.com/?sql=[sql 파일 URL]&&md=[md 파일 URL]
    ```
-
-5. Sample URL ( [SAMPLE URL](https://www.postgres-demo.inzent.com/?sql=https://raw.githubusercontent.com/experdb/PlayTrial/main/sample.sql&&md=https://raw.githubusercontent.com/experdb/PlayTrial/main/sample.md) - Sample URL )
-![image](https://user-images.githubusercontent.com/91466343/220004054-08543d74-5f48-4b80-ae44-5b5ff95640d8.png )
 
 ----
 ### Markdown 파일 작성법
