@@ -16,7 +16,8 @@
   ```
   .md 파일 작성시
   코드 tag 하나당 해당 button 생성
-  <!--매개변수는 0, 1, 2 ... code tag에 맞춰서 넣어줄 것-->
+  매개변수는 0, 1, 2 ... code tag에 맞춰서 넣어줄 것
+  
   <button onclick="copyCode(0)">copy</button>   
     ```sql
     SELECT first_name, last_name FROM employees;  
