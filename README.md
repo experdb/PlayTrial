@@ -29,7 +29,7 @@
   - 파일 URL 추출
     * `Raw` 버튼 클릭 => 해당 URL 복사
 ![image](https://user-images.githubusercontent.com/91466343/221455887-9bf862db-b5b2-4fe8-9e2d-a4e5f07affbb.png)  
-![image](https://user-images.githubusercontent.com/91466343/219995625-ad4bef59-9d9c-4dae-8462-047c637b0764.png)
+![image](https://user-images.githubusercontent.com/91466343/221456842-f3026166-a2bd-441e-8419-921bad0ad591.png)
 
 
 
