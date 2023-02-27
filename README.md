@@ -24,6 +24,20 @@
     SELECT first_name, last_name FROM employees;  
     ```
  ```
+ *이미지 파일 업로드*
+    1. Update Files 클릭
+    ![image](https://user-images.githubusercontent.com/91466343/221458257-fc3ab3b4-ef2b-406e-9a41-e6e90deeb513.png)  
+    
+    2. 원하는 이미지 사진 업로드
+    
+    
+    3. 이미지의 경로를 복사하여 md 파일에 경로 추가
+    ![image](https://user-images.githubusercontent.com/91466343/221458628-22307e10-15cb-4788-ba9c-61278a1f6a9b.png)  
+    
+    ```
+      ![image](sample.PNG)
+    ```
+
 
 5. `.md` 파일과 `.sql` 두 개의 파일 URL로 직접적으로 접속할 수 있도록 URL query string parameter 입력
 
