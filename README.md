@@ -4,7 +4,8 @@
 1. eXperDB Play Tiral Github Repo 접속 ( [PLAY TRIAL GITHUB](https://github.com/experdb/PlayTrial)   )
 
 2. Sample URL ( [SAMPLE URL](https://www.postgres-demo.inzent.com/?sql=https://raw.githubusercontent.com/experdb/PlayTrial/main/sample.sql&&md=https://raw.githubusercontent.com/experdb/PlayTrial/main/sample.md) - Sample URL )  
-![image](https://user-images.githubusercontent.com/91466343/221455269-b9b8cab0-c6c7-4e37-b20e-699c84327606.png)  
+![image](https://user-images.githubusercontent.com/91466343/221457316-1bbdb848-1206-4222-b285-2b7591a8f31d.png)  
+
 
 
 3. Add file 클릭 => `Create new file`(새로운 파일 생성), `Upload files`(파일 업로드) 택 1
