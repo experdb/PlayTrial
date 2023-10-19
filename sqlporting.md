@@ -8,13 +8,15 @@
 <button onclick="copyCode(0)">copy</button>
 ```sql
   SELECT NOW();
-```  
+```
+
 &nbsp;
 * SYSTIMESTAMP (Oracle) -> CURRENT_TIMESTAMP (PostgreSQL)  
 <button onclick="copyCode(0)">copy</button>
 ```sql 
   SELECT CURRENT_TIMESTAMP;
-```  
+```
+
 &nbsp;
 * ADD_MONTHS(date, n) (Oracle) -> date + INTERVAL 'n months' (PostgreSQL)  
 <button onclick="copyCode(0)">copy</button>
