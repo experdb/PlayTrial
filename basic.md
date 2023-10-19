@@ -17,7 +17,6 @@
 현재 클러스터에 생성된 전체 Database 목록을 출력합니다.  
 '+' 매개변수를 활용하면 보다 상세한 정보를 출력할 수 있으며, 패턴 지정 시 해당되는 목록만 출력합니다.  
 \l[+] [패턴]  
-&nbsp;  
 <button onclick="copyCode(1)">copy</button>
 ```sql
 \l
@@ -39,7 +38,6 @@
 현재 데이터베이스에 생성된 스키마 목록을 출력합니다.
 '+' 매개변수를 활용하면 보다 상세한 정보를 출력할 수 있으며, 패턴 지정 시 해당되는 목록만 출력합니다. 
 \dn[+] [패턴]  
-&nbsp;  
 <button onclick="copyCode(3)">copy</button>
 ```sql
 \du
@@ -51,7 +49,6 @@
 현재 데이터베이스에 생성된 테이블 목록을 출력합니다.
 '+' 매개변수를 활용하면 보다 상세한 정보를 출력할 수 있으며, 패턴 지정 시 해당되는 목록만 출력합니다.
 \dt[+] [패턴]  
-&nbsp;  
 <button onclick="copyCode(4)">copy</button>
 ```sql
 \dt
@@ -63,7 +60,6 @@
 현재 데이터베이스에 생성된 시퀀스 목록을 출력합니다.  
 '+' 매개변수를 활용하면 보다 상세한 정보를 출력할 수 있으며, 패턴 지정 시 해당되는 목록만 출력합니다.  
 \ds[+] [패턴]  
-&nbsp;  
 <button onclick="copyCode(5)">copy</button>
 ```sql
 \ds
@@ -75,7 +71,6 @@
 현재 데이터베이스에 생성된 함수 목록을 출력합니다.  
 '+' 매개변수를 활용하면 보다 상세한 정보를 출력할 수 있으며, 패턴 지정 시 해당되는 목록만 출력합니다.  
 \df[+] [패턴]  
-&nbsp;  
 <button onclick="copyCode(6)">copy</button>
 ```sql
 \df
@@ -87,7 +82,6 @@
 현재 데이터베이스에 생성된 뷰 목록을 출력합니다.  
 '+' 매개변수를 활용하면 보다 상세한 정보를 출력할 수 있으며, 패턴 지정 시 해당되는 목록만 출력합니다.  
 \dv[+] [패턴]  
-&nbsp;  
 <button onclick="copyCode(7)">copy</button>
 ```sql
 \dv
@@ -99,7 +93,6 @@
 현재 데이터베이스에 생성된 인덱스 목록을 출력합니다.  
 '+' 매개변수를 활용하면 보다 상세한 정보를 출력할 수 있으며, 패턴 지정 시 해당되는 목록만 출력합니다.  
 \di[+] [패턴]  
-&nbsp;  
 <button onclick="copyCode(8)">copy</button>
 ```sql
 \di
@@ -141,7 +134,6 @@ Query Buffer를 저장합니다.
 ### 15. 쿼리 실행 시간 출력.  
 쿼리가 실행되는데 소요된 시간을 출력합니다.  
 timing을 on 상태로 설정 시 활성화됩니다.  
-&nbsp;  
 <button onclick="copyCode(9)">copy</button>
 ```sql
 \timing on
@@ -152,7 +144,6 @@ timing을 on 상태로 설정 시 활성화됩니다.
 ### 16. 쿼리 실행 시간 출력.  
 쿼리가 실행되는데 소요된 시간을 출력합니다. off로 설정 시 시간을 출력하지 않습니다.  
 특정 쿼리 튜닝을 위해 수행 시간을 측정할때 유용합니다.
-&nbsp;  
 <button onclick="copyCode(10)">copy</button>
 ```sql
 \timing on
@@ -162,7 +153,6 @@ timing을 on 상태로 설정 시 활성화됩니다.
 &nbsp;&nbsp;&nbsp;&nbsp;
 ### 17. psql 명령어 출력.  
 psql 메타 명령어를 출력합니다.  
-&nbsp;  
 <button onclick="copyCode(11)">copy</button>
 ```sql
 \?
@@ -172,7 +162,6 @@ psql 메타 명령어를 출력합니다.
 &nbsp;&nbsp;&nbsp;&nbsp;
 ### 18. sql 명령어 출력.  
 sql 명령어를 출력합니다.
-&nbsp;  
 <button onclick="copyCode(12)">copy</button>
 ```sql
 \h
@@ -182,7 +171,6 @@ sql 명령어를 출력합니다.
 &nbsp;&nbsp;&nbsp;&nbsp;
 ### 19. psql 종료.  
 psql을 종료하고 PostgreSQL 클라이언트 툴 CLI 화면을 빠져나갑니다.
-&nbsp;  
 <button onclick="copyCode(13)">copy</button>
 ```sql
 \q
