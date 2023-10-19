@@ -16,7 +16,7 @@
   SELECT CURRENT_TIMESTAMP;
 ```  
 &nbsp;
-* ADD_MONTHS(date, n) (Oracle) -> date + INTERVAL 'n months' (PostgreSQL)   
+* ADD_MONTHS(date, n) (Oracle) -> date + INTERVAL 'n months' (PostgreSQL)  
 <button onclick="copyCode(0)">copy</button>
 ```sql 
   SELECT NOW() + INTERVAL '1 MONTH';
