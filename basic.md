@@ -13,9 +13,7 @@
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
-### 2. Database 목록 확인.
-
-&nbsp;  
+### 2. Database 목록 확인.  
 현재 클러스터에 생성된 전체 Database 목록을 출력합니다.  
 '+' 매개변수를 활용하면 보다 상세한 정보를 출력할 수 있으며, 패턴 지정 시 해당되는 목록만 출력합니다.  
 \l[+] [패턴]  
@@ -28,7 +26,6 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 ### 3. User 목록 확인.  
-&nbsp;  
 현재 클러스터에 생성된 전체 User 목록을 출력합니다. 패턴 지정 시 해당되는 목록만 출력합니다.  
 \du[+] [패턴]  
 <button onclick="copyCode(2)">copy</button>
@@ -39,7 +36,6 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 ### 4. Schema 목록 확인.  
-&nbsp;  
 현재 데이터베이스에 생성된 스키마 목록을 출력합니다.
 '+' 매개변수를 활용하면 보다 상세한 정보를 출력할 수 있으며, 패턴 지정 시 해당되는 목록만 출력합니다. 
 \dn[+] [패턴]  
@@ -52,7 +48,6 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 ### 5. Table 목록 확인.  
-&nbsp;  
 현재 데이터베이스에 생성된 테이블 목록을 출력합니다.
 '+' 매개변수를 활용하면 보다 상세한 정보를 출력할 수 있으며, 패턴 지정 시 해당되는 목록만 출력합니다.
 \dt[+] [패턴]  
@@ -65,7 +60,6 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 ### 6. Sequence 목록 확인.  
-&nbsp;  
 현재 데이터베이스에 생성된 시퀀스 목록을 출력합니다.  
 '+' 매개변수를 활용하면 보다 상세한 정보를 출력할 수 있으며, 패턴 지정 시 해당되는 목록만 출력합니다.  
 \ds[+] [패턴]  
@@ -78,7 +72,6 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 ### 7. Function 목록 확인.  
-&nbsp;  
 현재 데이터베이스에 생성된 함수 목록을 출력합니다.  
 '+' 매개변수를 활용하면 보다 상세한 정보를 출력할 수 있으며, 패턴 지정 시 해당되는 목록만 출력합니다.  
 \df[+] [패턴]  
@@ -91,7 +84,6 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 ### 8. View 목록 확인.  
-&nbsp;  
 현재 데이터베이스에 생성된 뷰 목록을 출력합니다.  
 '+' 매개변수를 활용하면 보다 상세한 정보를 출력할 수 있으며, 패턴 지정 시 해당되는 목록만 출력합니다.  
 \dv[+] [패턴]  
@@ -104,7 +96,6 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 ### 9. Index 목록 확인.  
-&nbsp;  
 현재 데이터베이스에 생성된 인덱스 목록을 출력합니다.  
 '+' 매개변수를 활용하면 보다 상세한 정보를 출력할 수 있으며, 패턴 지정 시 해당되는 목록만 출력합니다.  
 \di[+] [패턴]  
@@ -117,7 +108,6 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 ### 10. 객체 상세 정보 확인.  
-&nbsp;  
 지정한 객체의 상세 정보를 출력합니다.  
 \d [Object_name]  
 
@@ -125,35 +115,30 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 ### 11. 실행한 쿼리문 저장.  
-&nbsp;  
 이전에 실행한 명령어 전체 목록을 출력하고 파일로 저장합니다.  
 \s [파일명]  
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 ### 12. 쿼리 버퍼 저장.  
-&nbsp;  
 Query Buffer를 저장합니다.  
 \w [파일명]  
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 ### 13. 외부 에디터 이용.  
-&nbsp;  
 외부 Editor 툴을 이용해 query buffer 또는 파일을 수정합니다.  
 \e [파일명]  
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 ### 14. 쿼리 결과 파일로 전송.  
-&nbsp;  
 모든 쿼리 실행 결과들을 지정한 파일 또는 pipe로 전송합니다.  
 \o [파일명]  
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 ### 15. 쿼리 실행 시간 출력.  
-&nbsp;  
 쿼리가 실행되는데 소요된 시간을 출력합니다.  
 timing을 on 상태로 설정 시 활성화됩니다.  
 &nbsp;  
@@ -165,7 +150,6 @@ timing을 on 상태로 설정 시 활성화됩니다.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 ### 16. 쿼리 실행 시간 출력.  
-&nbsp;  
 쿼리가 실행되는데 소요된 시간을 출력합니다. off로 설정 시 시간을 출력하지 않습니다.  
 특정 쿼리 튜닝을 위해 수행 시간을 측정할때 유용합니다.
 &nbsp;  
@@ -177,7 +161,6 @@ timing을 on 상태로 설정 시 활성화됩니다.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 ### 17. psql 명령어 출력.  
-&nbsp;  
 psql 메타 명령어를 출력합니다.  
 &nbsp;  
 <button onclick="copyCode(11)">copy</button>
@@ -188,7 +171,6 @@ psql 메타 명령어를 출력합니다.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 ### 18. sql 명령어 출력.  
-&nbsp;  
 sql 명령어를 출력합니다.
 &nbsp;  
 <button onclick="copyCode(12)">copy</button>
@@ -199,7 +181,6 @@ sql 명령어를 출력합니다.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 ### 19. psql 종료.  
-&nbsp;  
 psql을 종료하고 PostgreSQL 클라이언트 툴 CLI 화면을 빠져나갑니다.
 &nbsp;  
 <button onclick="copyCode(13)">copy</button>
