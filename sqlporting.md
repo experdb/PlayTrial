@@ -23,6 +23,7 @@
 ```sql 
   SELECT NOW() + INTERVAL '1 MONTH';
 ```
+
 &nbsp;
 * LAST_DAY(date) (Oracle) -> DATE_TRUNC(date) + INTERVAL '1 month' - INTERVAL '1 day'   
 <button onclick="copyCode(0)">copy</button>
@@ -40,7 +41,7 @@
 ```
 
 &nbsp;
-* INSTR(string, substring) (Oracle) -> POSITION(substring IN string) (PostgreSQL)
+* INSTR(string, substring) (Oracle) -> POSITION(substring IN string) (PostgreSQL)  
 <button onclick="copyCode(0)">copy</button>
 ```sql 
   SELECT POSITION('B' IN 'ABCDEFG');
@@ -63,7 +64,7 @@
 ```
 
 &nbsp;
-* NVL2(expr1, expr2, expr3) (Oracle) -> CASE WHEN expr1 IS NOT NULL THEN expr2 ELSE expr3 END (PostgreSQL)
+* NVL2(expr1, expr2, expr3) (Oracle) -> CASE WHEN expr1 IS NOT NULL THEN expr2 ELSE expr3 END (PostgreSQL)  
 <button onclick="copyCode(0)">copy</button>
 ```sql 
   SELECT CASE WHEN 'ABCDEF' IS NOT NULL THEN 'F' ELSE 'T' END;
@@ -72,7 +73,7 @@
 &nbsp;&nbsp;&nbsp;
 4.구문
 &nbsp;
-* ROWNUM (Oracle) -> OFFSET FETCH (PostgreSQL)
+* ROWNUM (Oracle) -> OFFSET FETCH (PostgreSQL)  
 <button onclick="copyCode(0)">copy</button>
 ```sql 
  SELECT *                                                 
@@ -91,7 +92,7 @@
 ```
 
 &nbsp;
-* (+) (Oracle) -> OUTER JOIN (PostgreSQL)
+* (+) (Oracle) -> OUTER JOIN (PostgreSQL)  
 <button onclick="copyCode(0)">copy</button>
 ```sql 
  SELECT * FROM employees e LEFT OUTER JOIN departments d on (e.department_id = d.department_id);
