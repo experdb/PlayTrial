@@ -57,7 +57,7 @@
 '+' 매개변수를 활용하면 보다 상세한 정보를 출력할 수 있으며, 패턴 지정 시 해당되는 목록만 출력합니다.
 \dt[+] [패턴]  
 &nbsp;  
-<button onclick="copyCode(3)">copy</button>
+<button onclick="copyCode(4)">copy</button>
 ```sql
 \dt
 ```
@@ -70,11 +70,49 @@
 '+' 매개변수를 활용하면 보다 상세한 정보를 출력할 수 있으며, 패턴 지정 시 해당되는 목록만 출력합니다.  
 \ds[+] [패턴]  
 &nbsp;  
-<button onclick="copyCode(3)">copy</button>
+<button onclick="copyCode(5)">copy</button>
 ```sql
 \ds
 ```
 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+### 7. Function 목록 확인.  
+&nbsp;  
+현재 데이터베이스에 생성된 함수 목록을 출력합니다.  
+'+' 매개변수를 활용하면 보다 상세한 정보를 출력할 수 있으며, 패턴 지정 시 해당되는 목록만 출력합니다.  
+\df[+] [패턴]  
+&nbsp;  
+<button onclick="copyCode(6)">copy</button>
+```sql
+\df
+```
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+### 8. View 목록 확인.  
+&nbsp;  
+현재 데이터베이스에 생성된 뷰 목록을 출력합니다.  
+'+' 매개변수를 활용하면 보다 상세한 정보를 출력할 수 있으며, 패턴 지정 시 해당되는 목록만 출력합니다.  
+\dv[+] [패턴]  
+&nbsp;  
+<button onclick="copyCode(7)">copy</button>
+```sql
+\df
+```
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+### 9. View 목록 확인.  
+&nbsp;  
+현재 데이터베이스에 생성된 인덱스 목록을 출력합니다.  
+'+' 매개변수를 활용하면 보다 상세한 정보를 출력할 수 있으며, 패턴 지정 시 해당되는 목록만 출력합니다.  
+\di[+] [패턴]  
+&nbsp;  
+<button onclick="copyCode(8)">copy</button>
+```sql
+\dv
+```
 
 
 
