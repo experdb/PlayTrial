@@ -3,7 +3,6 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 ### 1. 데이터베이스 접속.
-
 &nbsp;  
 <button onclick="copyCode(0)">copy</button>
 ```sql
@@ -20,7 +19,6 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 ### 2. Database 목록 확인.
-
 &nbsp;  
 <button onclick="copyCode(1)">copy</button>
 ```sql
