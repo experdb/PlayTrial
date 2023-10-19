@@ -61,6 +61,18 @@
 ```
 
 
+&nbsp;&nbsp;&nbsp;&nbsp;
+### 5. Table 목록 확인.
+
+&nbsp;  
+현재 데이터베이스에 생성된 테이블 목록을 출력합니다.
+'+' 매개변수를 활용하면 보다 상세한 정보를 출력할 수 있으며, 패턴 지정 시 해당되는 목록만 출력합니다.
+\dt[+] [패턴]
+&nbsp;  
+<button onclick="copyCode(3)">copy</button>
+```sql
+\dt
+```
 
 
 
