@@ -18,10 +18,6 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 ### 2. Database 목록 확인.
-<button onclick="copyCode(1)">copy</button>
-```sql
-\l
-```
 
 &nbsp;  
 현재 클러스터에 생성된 전체 Database 목록을 출력합니다.
@@ -29,6 +25,13 @@
 '+' 매개변수를 활용하면 보다 상세한 정보를 출력할 수 있으며, 패턴 지정 시 해당되는 목록만 출력합니다.
 &nbsp;  
 \l[+] [패턴]
+&nbsp;  
+<button onclick="copyCode(1)">copy</button>
+```sql
+\l
+```
+
+
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
