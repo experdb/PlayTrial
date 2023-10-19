@@ -11,6 +11,14 @@
 ```
 
 &nbsp;
+* SYSDATE (Oracle) -> NOW() (PostgreSQL)   
+<button onclick="copyCode(0)">copy</button>
+```sql
+  SELECT NOW();
+```
+
+
+&nbsp;
 * 접속하고자 하는 Database와 User 명을 매개변수로 하여 접속합니다.
 
 &nbsp;
