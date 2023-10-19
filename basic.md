@@ -4,7 +4,7 @@
 * 데이터베이스 접속
 <button onclick="copyCode(0)">copy</button>
 ```sql
-\c
+\c 
 ```
 
  - 접속하고자 하는 Database와 User명을 매개변수로 하여 접속합니다.
