@@ -14,21 +14,21 @@
 
 &nbsp;
 * SYSTIMESTAMP (Oracle) -> CURRENT_TIMESTAMP (PostgreSQL)  
-<button onclick="copyCode(0)">copy</button>
+<button onclick="copyCode(1)">copy</button>
 ```sql 
   SELECT CURRENT_TIMESTAMP;
 ```
 
 &nbsp;
 * ADD_MONTHS(date, n) (Oracle) -> date + INTERVAL 'n months' (PostgreSQL)  
-<button onclick="copyCode(0)">copy</button>
+<button onclick="copyCode(2)">copy</button>
 ```sql 
   SELECT NOW() + INTERVAL '1 MONTH';
 ```
 
 &nbsp;
 * LAST_DAY(date) (Oracle) -> DATE_TRUNC(date) + INTERVAL '1 month' - INTERVAL '1 day'   
-<button onclick="copyCode(0)">copy</button>
+<button onclick="copyCode(3)">copy</button>
 ```sql 
   SELECT (DATE_TRUNC('MONTH',NOW()) + INTERVAL '1 MONTH' - INTERVAL '1 DAY')::DATE;
 ```
@@ -38,14 +38,14 @@
 
 &nbsp;
 * SUBSTR(string, start, length) (Oracle) -> SUBSTRING(string FROM start FOR length) (PostgreSQL)   
-<button onclick="copyCode(0)">copy</button>
+<button onclick="copyCode(4)">copy</button>
 ```sql 
   SELECT SUBSTRING('ABCDEFG' FROM 2 FOR 3);
 ```
 
 &nbsp;
 * INSTR(string, substring) (Oracle) -> POSITION(substring IN string) (PostgreSQL)  
-<button onclick="copyCode(0)">copy</button>
+<button onclick="copyCode(5)">copy</button>
 ```sql 
   SELECT POSITION('B' IN 'ABCDEFG');
 ```
@@ -55,21 +55,21 @@
 
 &nbsp;
 * DECODE(expression, search, result, ...) (Oracle) -> CASE 문 사용 (PostgreSQL)   
-<button onclick="copyCode(0)">copy</button>
+<button onclick="copyCode(6)">copy</button>
 ```sql 
   SELECT CASE '10' WHEN '10' THEN 'T' ELSE 'F' END;
 ```
 
 &nbsp;
 * NVL(expr1, expr2) (Oracle) -> COALESCE(expr1, expr2) (PostgreSQL)   
-<button onclick="copyCode(0)">copy</button>
+<button onclick="copyCode(7)">copy</button>
 ```sql 
   SELECT COALESCE(NULL, 'F');  --copy 
 ```
 
 &nbsp;
 * NVL2(expr1, expr2, expr3) (Oracle) -> CASE WHEN expr1 IS NOT NULL THEN expr2 ELSE expr3 END (PostgreSQL)  
-<button onclick="copyCode(0)">copy</button>
+<button onclick="copyCode(8)">copy</button>
 ```sql 
   SELECT CASE WHEN 'ABCDEF' IS NOT NULL THEN 'F' ELSE 'T' END;
 ```
@@ -79,7 +79,7 @@
 
 &nbsp;
 * ROWNUM (Oracle) -> OFFSET FETCH (PostgreSQL)  
-<button onclick="copyCode(0)">copy</button>
+<button onclick="copyCode(9)">copy</button>
 ```sql 
  SELECT *                                                 
   FROM employees
@@ -89,7 +89,7 @@
 
 &nbsp;
 * MINUS (Oracle) -> EXCEPT (PostgreSQL)   
-<button onclick="copyCode(0)">copy</button>
+<button onclick="copyCode(10)">copy</button>
 ```sql 
  SELECT department_id FROM departments
  EXCEPT
