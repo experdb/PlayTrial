@@ -1,8 +1,8 @@
 # SQL Porting
 
 ### Oracle 데이터베이스에서 PostgreSQL로 전환하는 과정은 복잡하며, 이를 위해선 Oracle과 PostgreSQL 간의 함수 <br>차이를 이해하고 적절한 포팅 방법을 익혀야 합니다. <br>이 과정에는 데이터 타입, SQL 문법, 저장 프로시저 등 여러 요소들이 포함되며, 이들 간의 차이점을 이해하는 것이<br> 중요합니다. <br>또한, 효율적인 전환을 위해 자동화 도구의 사용도 고려해야 합니다. 이러한 지식을 습득함으로써, Oracle에서 PostgreSQL로의 전환 과정을 원활하게 진행할 수 있습니다   
- 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ 
 1.  날짜와 시간 관련 함수
 * SYSDATE (Oracle) -> NOW() (PostgreSQL)   
 <button onclick="copyCode(0)">copy</button>
@@ -27,7 +27,7 @@
 ```sql 
   SELECT (DATE_TRUNC('MONTH',NOW()) + INTERVAL '1 MONTH' - INTERVAL '1 DAY')::DATE;
 ```
-&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
 2.문자열 함수
 &nbsp;
 * SUBSTR(string, start, length) (Oracle) -> SUBSTRING(string FROM start FOR length) (PostgreSQL)   
@@ -41,7 +41,7 @@
 ```sql 
   SELECT POSITION('B' IN 'ABCDEFG');
 ```
-&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
 3.기타 함수:
 &nbsp;
 * DECODE(expression, search, result, ...) (Oracle) -> CASE 문 사용 (PostgreSQL)   
@@ -61,7 +61,7 @@
 ```sql 
   SELECT CASE WHEN 'ABCDEF' IS NOT NULL THEN 'F' ELSE 'T' END;
 ```
-&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
 4.구문
 &nbsp;
 * ROWNUM (Oracle) -> OFFSET FETCH (PostgreSQL)
