@@ -7,7 +7,7 @@
 \c 
 ```
 
-1.  데이터베이스 접속. 
+1.  데이터베이스 접속
 <button onclick="copyCode(0)">copy</button>
 ```sql
 \c 
