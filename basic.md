@@ -98,7 +98,7 @@
 &nbsp;  
 <button onclick="copyCode(7)">copy</button>
 ```sql
-\df
+\dv
 ```
 
 
@@ -111,7 +111,7 @@
 &nbsp;  
 <button onclick="copyCode(8)">copy</button>
 ```sql
-\dv
+\di
 ```
 
 
