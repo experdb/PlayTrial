@@ -5,16 +5,32 @@
 ### 1. 데이터베이스 접속.
 
 &nbsp;  
-접속하고자하는 Database와 User 명을 매개변수로하여 접속합니다.  
-&nbsp;  
-매개변수 없이 명령을 실행하면 현재 접속중인 Database와 User를 조회할 수 있습니다.  
-&nbsp;
-\c [DB_NAME] [Connection User]
-
-&nbsp;  
 <button onclick="copyCode(0)">copy</button>
 ```sql
 \c 
 ```
+
+&nbsp;  
+* 접속하고자하는 Database와 User 명을 매개변수로하여 접속합니다.  
+&nbsp;  
+* 매개변수 없이 명령을 실행하면 현재 접속중인 Database와 User를 조회할 수 있습니다.  
+&nbsp;
+\c [DB_NAME] [Connection User]
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+### 2. Database 목록 확인.
+
+&nbsp;  
+<button onclick="copyCode(1)">copy</button>
+```sql
+\l 
+```
+
+&nbsp;  
+현재 클러스터에 생성된 전체 Database 목록을 출력합니다.
+'+' 매개변수를 활용하면 보다 상세한 정보를 출력할 수 있으며, 패턴 지정 시 해당되는 목록만 출력합니다.
+\l[+] [패턴]
+
 
 
