@@ -5,7 +5,7 @@
 ### 1. 데이터베이스 접속.
 <button onclick="copyCode(0)">copy</button>
 ```sql
-\c 
+\c
 ```
 
 &nbsp;  
@@ -20,7 +20,7 @@
 ### 2. Database 목록 확인.
 <button onclick="copyCode(1)">copy</button>
 ```sql
-\l 
+\l
 ```
 
 &nbsp;  
@@ -31,4 +31,15 @@
 \l[+] [패턴]
 
 
+&nbsp;&nbsp;&nbsp;&nbsp;
+### 3. User 목록 확인.
+<button onclick="copyCode(2)">copy</button>
+```sql
+\du
+```
+
+&nbsp;  
+현재 클러스터에 생성된 전체 User 목록을 출력합니다. 패턴 지정 시 해당되는 목록만 출력합니다.
+&nbsp;  
+\l[+] [패턴]
 
