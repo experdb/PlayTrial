@@ -11,9 +11,9 @@
 ```
 
 &nbsp;
-* 접속하고자 하는 Database와 User 명을 매개변수로 하여 접속합니다.
+<br>* 접속하고자 하는 Database와 User 명을 매개변수로 하여 접속합니다.
 
 &nbsp;
-* 매개변수 없이 명령을 실행하면 현재 접속중인 Database와 User를 조회할 수 있습니다.
+<br>* 매개변수 없이 명령을 실행하면 현재 접속중인 Database와 User를 조회할 수 있습니다.
 &nbsp;\c [DB_NAME] [Connection User]
 
