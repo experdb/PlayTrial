@@ -14,6 +14,8 @@
 ```sql
 \c 
 ```
+
+&nbsp; 
 \c [DB_NAME] [Connection User]
 
 
