@@ -8,13 +8,12 @@
 
 &nbsp;
 매개변수 없이 명령을 실행하면 현재 접속중인 Database와 User를 조회할 수 있습니다. 
-\c [DB_NAME] [Connection User]
 
 &nbsp;  
 <button onclick="copyCode(0)">copy</button>
 ```sql
 \c 
 ```
-
+\c [DB_NAME] [Connection User]
 
 
