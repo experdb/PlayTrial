@@ -146,7 +146,7 @@ timing을 on 상태로 설정 시 활성화됩니다.
 특정 쿼리 튜닝을 위해 수행 시간을 측정할때 유용합니다.
 <button onclick="copyCode(10)">copy</button>
 ```sql
-\timing on
+\timing off
 ```
 
 
