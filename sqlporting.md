@@ -100,5 +100,6 @@
 * (+) (Oracle) -> OUTER JOIN (PostgreSQL)  
 <button onclick="copyCode(0)">copy</button>
 ```sql 
- SELECT * FROM employees e LEFT OUTER JOIN departments d on (e.department_id = d.department_id);
+ SELECT * FROM employees e
+   LEFT OUTER JOIN departments d on (e.department_id = d.department_id);
 ```
