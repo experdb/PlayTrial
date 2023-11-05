@@ -143,7 +143,7 @@ timing을 on 상태로 설정 시 활성화됩니다.
 &nbsp;&nbsp;&nbsp;&nbsp;
 ### 16. 쿼리 실행 시간 출력.  
 쿼리가 실행되는데 소요된 시간을 출력합니다. off로 설정 시 시간을 출력하지 않습니다.  
-특정 쿼리 튜닝을 위해 수행 시간을 측정할때 유용합니다.
+특정 쿼리 튜닝을 위해 수행 시간을 측정할때 유용합니다.  
 <button onclick="copyCode(10)">copy</button>
 ```sql
 \timing off
@@ -152,7 +152,7 @@ timing을 on 상태로 설정 시 활성화됩니다.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 ### 17. psql 명령어 출력.  
-psql 메타 명령어를 출력합니다.
+psql 메타 명령어를 출력합니다.  
 <button onclick="copyCode(11)">copy</button>
 ```sql
 \?
@@ -161,7 +161,7 @@ psql 메타 명령어를 출력합니다.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 ### 18. sql 명령어 출력.  
-sql 명령어를 출력합니다.
+sql 명령어를 출력합니다.  
 <button onclick="copyCode(12)">copy</button>
 ```sql
 \h
@@ -170,7 +170,7 @@ sql 명령어를 출력합니다.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 ### 19. psql 종료.  
-psql을 종료하고 PostgreSQL 클라이언트 툴 CLI 화면을 빠져나갑니다.
+psql을 종료하고 PostgreSQL 클라이언트 툴 CLI 화면을 빠져나갑니다.  
 <button onclick="copyCode(13)">copy</button>
 ```sql
 \q
