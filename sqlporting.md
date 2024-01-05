@@ -98,8 +98,27 @@
 
 &nbsp;
 * (+) (Oracle) -> OUTER JOIN (PostgreSQL)  
-<button onclick="copyCode(0)">copy</button>
+<button onclick="copyCode(11)">copy</button>
 ```sql 
  SELECT * FROM employees e
    LEFT OUTER JOIN departments d on (e.department_id = d.department_id);
+```
+
+&nbsp;
+* CONNECT BY START WITH (Oracle) -> WITH RECURSIVE CTE (PostgreSQL)
+  SELECT E.*,LEVEL
+  FROM EMPLOYEES E
+  START WITH MANAGER_ID IS NULL
+  CONNECT BY PRIOR EMPLOYEE_ID = MANAGER_ID;
+<button onclick="copyCode(12)">copy</button>
+```sql 
+ WITH RECURSIVE A AS (
+ SELECT E.*, 1 LEVEL
+ FROM EMPLOYEES E
+ WHERE MANAGER_ID IS NULL
+ UNION ALL
+ SELECT D.*, A.LEVEL + 1
+ FROM EMPLOYEES D
+ JOIN A ON A.EMPLOYEE_ID = D.MANAGER_ID )
+ SELECT * FROM A;
 ```
