@@ -4,7 +4,6 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  
 ### 1. 기본 함수 Porting
-
 &nbsp;
 * Oracle 데이터 타입 varchar2 는 varchar 또는 text 로 변경해야 한다.<br>
   예제에서는 varchar 를 사용하지만 특정 문자열 길이 제한이 필요하지 않은 경우 텍스트를 사용하는 것이 더 좋다.<br>
@@ -40,7 +39,6 @@ $$ LANGUAGE plpgsql ;
 &nbsp;
 
 ### 2. 본문 안에서 다른 함수를 생성하는 프로시저 Porting
-
 &nbsp;
 * PostgreSQL 에서 11버전부터 지원. 기본적인 동작 구조는 FUNCTION 과 동일하다.<br>
 * PL/SQL에서는 is ~ begin 사이 변수 선언부에는 declare를 사용하지 않으며, CURSOR는 사용시 호출 문법만 다를 뿐 모두 동일하다.<br>
@@ -113,7 +111,6 @@ call cs_update_referrer_type_proc();
 
 ```
 ### 3. OUT 파라미터를 사용하는 함수 Porting
-
 &nbsp;
 * PL/pgSQL의 현재 버전의 프로시져에서는 OUT 인수를 지원하지 않으나 함수로 동일하게 구현 가능하다.<br>
 * Oracle 내부함수 instr()를 postgrSQL의 position함수로 대체 가능하다.<br>
@@ -205,7 +202,6 @@ SELECT * FROM cs_parse_url('http://foobar.com/query.cgi?baz');
 &nbsp;
 
 ### 4. ORACLE 고유 기능 Porting
-
 &nbsp;
 * 프로시져 또는 함수 내에서 LOCK TABLE 기능은 Oracle 과 동일하게 사용 가능하다.<br> 
 * 읽기 트랜잭션만 동시에 수행 가능하며 Oracle의 사용자 정의 error를 PostgreSQL에서는 비슷하게 동작하는 RAISE EXCEPTION 를 통해서 구현 가능하다.<br>
