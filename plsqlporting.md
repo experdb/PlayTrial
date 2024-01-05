@@ -112,4 +112,160 @@ $func$ LANGUAGE plpgsql;
 call cs_update_referrer_type_proc();
 
 ```
+### 3. OUT 파라미터를 사용하는 함수 Porting
+
+&nbsp;
+* PL/pgSQL의 현재 버전의 프로시져에서는 OUT 인수를 지원하지 않으나 함수로 동일하게 구현 가능하다.<br>
+* Oracle 내부함수 instr()를 postgrSQL의 position함수로 대체 가능하다.<br>
+* 함수 호출방식으로 구현한다.
+&nbsp;
+```sql
+CREATE OR REPLACE PROCEDURE cs_parse_url(
+    v_url IN VARCHAR2,
+    v_host OUT VARCHAR2,  -- This will be passed back
+    v_path OUT VARCHAR2,  -- This one too
+    v_query OUT VARCHAR2) -- And this one
+IS
+    a_pos1 INTEGER;
+    a_pos2 INTEGER;
+BEGIN
+    v_host := NULL;
+    v_path := NULL;
+    v_query := NULL;
+    a_pos1 := instr(v_url, '//');
+    IF a_pos1 = 0 THEN
+        RETURN;
+    END IF;
+    a_pos2 := instr(v_url, '/', a_pos1 + 2);
+    IF a_pos2 = 0 THEN
+        v_host := substr(v_url, a_pos1 + 2);
+        v_path := '/';
+        RETURN;
+    END IF;
+    v_host := substr(v_url, a_pos1 + 2, a_pos2 - a_pos1 - 2);
+    a_pos1 := instr(v_url, '?', a_pos2 + 1);
+    IF a_pos1 = 0 THEN
+        v_path := substr(v_url, a_pos2);
+        RETURN;
+    END IF;
+   v_path := substr(v_url, a_pos2, a_pos1 - a_pos2);
+    v_query := substr(v_url, a_pos1 + 1);
+END;
+/
+SET serveroutput ON
+DECLARE
+    v_host VARCHAR2(100);
+    v_path VARCHAR2(100);
+    v_query VARCHAR2(100);
+BEGIN
+    cs_parse_url('http://foobar.com/query.cgi?baz', v_host, v_path, v_query);
+    dbms_output.put_line(v_host||','||v_path||','||v_query);
+END;
+/
+
+```
+<button onclick="copyCode(5)">copy</button>
+```sql
+CREATE OR REPLACE FUNCTION cs_parse_url(
+    v_url IN VARCHAR,
+    v_host OUT VARCHAR,  -- This will be passed back
+    v_path OUT VARCHAR,  -- This one too
+    v_query OUT VARCHAR) -- And this one
+AS $$
+DECLARE
+    a_pos1 INTEGER;
+    a_pos2 INTEGER;
+BEGIN
+    v_host := NULL;
+    v_path := NULL;
+    v_query := NULL;
+    a_pos1 := position('//' in v_url);
+    IF a_pos1 = 0 THEN
+        RETURN;
+    END IF;
+    a_pos2 := position('/' in substr(v_url, a_pos1+2)) + a_pos1 + 1;
+    IF a_pos2 = 0 THEN
+        v_host := substr(v_url, a_pos1 + 2);
+        v_path := '/';
+        RETURN;
+    END IF;
+    v_host := substr(v_url, a_pos1 + 2, a_pos2 - a_pos1 - 2);
+    a_pos1 := position('?' in substr(v_url, a_pos2 + 1)) + a_pos2;
+    IF a_pos1 = 0 THEN
+        v_path := substr(v_url, a_pos2);
+        RETURN;
+    END IF;
+    v_path := substr(v_url, a_pos2, a_pos1 - a_pos2);
+    v_query := substr(v_url, a_pos1 + 1);
+END;
+$$ LANGUAGE plpgsql;
+
+SELECT * FROM cs_parse_url('http://foobar.com/query.cgi?baz');
+```
+&nbsp;
+
+### 4. ORACLE 고유 기능 Porting
+
+&nbsp;
+* 프로시져 또는 함수 내에서 LOCK TABLE 기능은 Oracle 과 동일하게 사용 가능하다.<br> 
+* 읽기 트랜잭션만 동시에 수행 가능하며 Oracle의 사용자 정의 error를 PostgreSQL에서는 비슷하게 동작하는 RAISE EXCEPTION 를 통해서 구현 가능하다.<br>
+* EXCEPTION 절은 동일하게 지원되며, PL/pgSQL 에서 지원하는 EXCEPTION 명은 Oracle 과 다르지만 동일한 기능을 대부분 지원한다.<br>
+
+```sql
+CREATE OR REPLACE PROCEDURE cs_create_job(v_job_id IN INTEGER) IS
+    a_running_job_count INTEGER;
+
+BEGIN
+    LOCK TABLE cs_jobs IN EXCLUSIVE MODE;
+
+    SELECT count(*) INTO a_running_job_count FROM cs_jobs WHERE end_stamp IS NULL;
+
+    IF a_running_job_count > 0 THEN
+        COMMIT; -- free lock
+        raise_application_error(-20000,
+                 'Unable to create a new job: a job is currently running.');
+    END IF;
+
+    DELETE FROM cs_active_job;
+    INSERT INTO cs_active_job(job_id) VALUES (v_job_id);
+
+    BEGIN
+        INSERT INTO cs_jobs (job_id, start_stamp) VALUES (v_job_id, sysdate);
+    EXCEPTION
+        WHEN dup_val_on_index THEN NULL; -- don't worry if it already exists
+    END;
+    COMMIT;
+END;
+/
+show errors;
+```
+<button onclick="copyCode(7)">copy</button>
+```sql
+CREATE OR REPLACE PROCEDURE cs_create_job(v_job_id integer) AS $$
+DECLARE
+    a_running_job_count integer;
+BEGIN
+    LOCK TABLE cs_jobs IN EXCLUSIVE MODE;
+
+    SELECT count(*) INTO a_running_job_count FROM cs_jobs WHERE end_stamp IS NULL;
+
+    IF a_running_job_count > 0 THEN
+        COMMIT; -- free lock
+        RAISE EXCEPTION 'Unable to create a new job: a job is currently running'; -- (1)
+    END IF;
+
+    DELETE FROM cs_active_job;
+    INSERT INTO cs_active_job(job_id) VALUES (v_job_id);
+
+    BEGIN
+        INSERT INTO cs_jobs (job_id, start_stamp) VALUES (v_job_id, now());
+    EXCEPTION
+        WHEN unique_violation THEN -- (2)
+            -- don't worry if it already exists
+    END;
+    COMMIT;
+END;
+$$ LANGUAGE plpgsql;
+```
+&nbsp;
 
