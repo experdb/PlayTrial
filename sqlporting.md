@@ -112,6 +112,7 @@
   START WITH MANAGER_ID IS NULL
   CONNECT BY PRIOR EMPLOYEE_ID = MANAGER_ID;
 ```
+* WITH RECURSIVE CTE (PostgreSQL)
 <button onclick="copyCode(13)">copy</button>
 ```sql 
  WITH RECURSIVE A AS ( 
