@@ -53,8 +53,8 @@ select cs_fmt_browser_version('eXperDB','v15');
 ```sql
 CREATE OR REPLACE PROCEDURE cs_update_referrer_type_proc IS
  CURSOR referrer_keys IS
-        SELECT * FROM cs_referrer_keys
-        ORDER BY try_order;
+        SELECT * FROM employees 
+        ORDER BY employee_id;
 
     func_cmd VARCHAR(4000);
 BEGIN
@@ -63,9 +63,9 @@ BEGIN
 
     FOR referrer_key IN referrer_keys LOOP
         func_cmd := func_cmd ||
-          ' IF v_' || referrer_key.kind
-          || ' LIKE ''' || referrer_key.key_string
-          || ''' THEN RETURN ''' || referrer_key.referrer_type
+          ' IF v_' || referrer_key.employee_id
+          || ' LIKE ''' || referrer_key.employee_id
+          || ''' THEN RETURN ''' || referrer_key.first_name
           || '''; END IF;';
     END LOOP;
 
