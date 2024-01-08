@@ -84,8 +84,8 @@ exec cs_update_referrer_type_proc;
 CREATE OR REPLACE PROCEDURE cs_update_referrer_type_proc() AS $func$
 DECLARE
     referrer_keys CURSOR IS
-        SELECT * FROM cs_referrer_keys
-        ORDER BY try_order;
+        SELECT * FROM employees 
+        ORDER BY employee_id;
     func_body text;
     func_cmd text;
 BEGIN
@@ -93,9 +93,9 @@ BEGIN
 
     FOR referrer_key IN referrer_keys LOOP
         func_body := func_body ||
-          ' IF v_' || referrer_key.kind
-          || ' LIKE ' || quote_literal(referrer_key.key_string)
-          || ' THEN RETURN ' || quote_literal(referrer_key.referrer_type)
+          ' IF v_' || referrer_key.employee_id
+          || ' LIKE ' || quote_literal(referrer_key.employee_id)
+          || ' THEN RETURN ' || quote_literal(referrer_key.first_name)
           || '; END IF;' ;
     END LOOP;
 
