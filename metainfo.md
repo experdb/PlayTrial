@@ -5,14 +5,14 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 #### 1. pg_class
-* pg_class는 데이터베이스 내의 테이블, 인덱스, 시퀀스, 뷰 등과 같은 모든 관계의 정보를 담고 있습니다.
+* pg_class는 데이터베이스 내의 테이블, 인덱스, 시퀀스, 뷰 등과 같은 모든 관계의 정보를 담고 있습니다.<br>
 <button onclick="copyCode(0)">copy</button>
 ```sql
 SELECT relname FROM pg_class WHERE relkind = 'r';
 ```
 &nbsp;
 #### 2. pg_attribute
-* pg_attribute는 테이블의 컬럼 정보를 포함합니다.
+* pg_attribute는 테이블의 컬럼 정보를 포함합니다.<br>
 <button onclick="copyCode(1)">copy</button>
 ```sql
 SELECT attname FROM pg_attribute WHERE attrelid = 'your_table_name'::regclass;
