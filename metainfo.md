@@ -1,17 +1,17 @@
 # 메타 정보 조회
 
-###System Catalog는 테이블, 칼럼 정보 같은 스키마 메타데이터와 파라미터, 락(lock) 등의 내부 설정 및 오퍼레이션 정보를 담고 있는 영역입니다.<br> PostgreSQL의 System Catalog는 테이블 형태로 되어 있으며 각 데이터베이스의 "pg_catalog" 스키마가 소유하고 있습니다.<br> 
+### System Catalog는 테이블, 칼럼 정보 같은 스키마 메타데이터와 파라미터, 락(lock) 등의 내부 설정 및 오퍼레이션 정보를 담고 있는 영역입니다.<br> PostgreSQL의 System Catalog는 테이블 형태로 되어 있으며 각 데이터베이스의 "pg_catalog" 스키마가 소유하고 있습니다.<br> 
    System Catalog에 대한 접근은 테이블을 직접 조회하거나, "information_schema" 스키마 소유 뷰를 통해서 할 수 있습니다<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-### pg_class
+##### 1. pg_class
 * pg_class는 데이터베이스 내의 테이블, 인덱스, 시퀀스, 뷰 등과 같은 모든 관계의 정보를 담고 있습니다.
 <button onclick="copyCode(0)">copy</button>
 ```sql
 SELECT relname FROM pg_class WHERE relkind = 'r';
 ```
 &nbsp;
-### pg_attribute
+##### 2. pg_attribute
 * pg_attribute는 테이블의 컬럼 정보를 포함합니다.
 <button onclick="copyCode(1)">copy</button>
 ```sql
