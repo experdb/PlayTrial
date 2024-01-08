@@ -40,7 +40,7 @@
 \dn[+] [패턴]  
 <button onclick="copyCode(3)">copy</button>
 ```sql
-\du
+\dn
 ```
 
 
