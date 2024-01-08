@@ -63,7 +63,8 @@ SELECT name, setting FROM pg_settings;
 * pg_constraint는 테이블의 제약 조건에 대한 정보를 포함합니다.<br>
 <button onclick="copyCode(8)">copy</button>
 ```sql
-SELECT conname FROM pg_constraint WHERE conrelid = 'your_table_name'::regclass;
+CREATE TABLE t1 (no INTEGER PRIMARY KEY, amt NUMERIC default 0, CHECK(amt > 0));
+SELECT conname FROM pg_constraint WHERE conrelid = 't1'::regclass;
 ```
 &nbsp;
 ### 10. information_schema
