@@ -69,8 +69,9 @@ SELECT conname FROM pg_constraint WHERE conrelid = 't1'::regclass;
 &nbsp;
 ### 10. information_schema
 * information_schema는 PostgreSQL을 포함한 많은 SQL 기반 데이터베이스 시스템에서 표준 방식으로 데이터베이스 메타데이터를 제공하는 특별한 스키마입니다.<br> 
-  이 스키마는 ANSI SQL 표준에 정의된 여러 뷰를 포함하고 있으며, 데이터베이스의 구조와 특성에 대한 정보를 쿼리할 수 있는 표준화된 방법을 제공합니다.<br>
+  이 스키마는 ANSI SQL 표준에 정의된 여러 뷰(tables,columns,views,triggers,sequences,table_constraints,etc)를 포함하고 있으며, 데이터베이스의 구조와 특성에 대한 정보를 쿼리할 수 있는 표준화된 방법을 제공합니다.<br>
 <button onclick="copyCode(9)">copy</button>
 ```sql
+SELECT * FROM information_schema.tables;
 SELECT * FROM information_schema.table_constraints;
 ```
