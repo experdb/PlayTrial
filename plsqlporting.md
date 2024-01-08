@@ -35,6 +35,8 @@ CREATE OR REPLACE FUNCTION cs_fmt_browser_version(v_name varchar, v_version varc
       RETURN v_name || '/' || v_version ;
     END ;
 $$ LANGUAGE plpgsql ;
+
+select cs_fmt_browser_version('eXperDB','v15');
 ```
 &nbsp;
 
