@@ -106,6 +106,13 @@
 
 &nbsp;
 * CONNECT BY START WITH (Oracle) -> WITH RECURSIVE CTE (PostgreSQL)
+```sql 
+SELECT E.*,LEVEL
+FROM EMPLOYEES E
+START WITH MANAGER_ID IS NULL
+CONNECT BY PRIOR EMPLOYEE_ID = MANAGER_ID;
+```
+
 <button onclick="copyCode(13)">copy</button>
 ```sql 
  WITH RECURSIVE A AS ( 
