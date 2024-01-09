@@ -12,7 +12,7 @@
 * 오라클 접근 방식에서 종료 / 는 예제와 같이 인용문자($$)로 종료를 표시하며  PL/pgSQL 만이 유일한 함수 언어가 아니므로 LANGUAGE 절을 추가해야 한다.<br>
 * show errors 명령은 PostgreSQL 에 존재하지 않으며 오류가 자동으로 보고되므로 필요하지 않다.<br>
 
-<button onclick="copyCode(0)" id="hideButton">copy2</button>
+<button onclick="copyCode(0)" disabled>copy</button>
 ```sql
 CREATE OR REPLACE FUNCTION cs_fmt_browser_version(v_name varchar2, v_version varchar2)
   RETURN varchar2 IS
