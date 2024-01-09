@@ -79,7 +79,7 @@ show errors;
 exec cs_update_referrer_type_proc;
 ```
 
-<button onclick="copyCode(2)">copy</button>
+<button onclick="copyCode(3)">copy</button>
 ```sql
 CREATE OR REPLACE PROCEDURE cs_update_referrer_type_proc() AS $func$
 DECLARE
@@ -163,7 +163,7 @@ END;
 /
 
 ```
-<button onclick="copyCode(3)">copy</button>
+<button onclick="copyCode(5)">copy</button>
 ```sql
 CREATE OR REPLACE FUNCTION cs_parse_url(
     v_url IN VARCHAR,
@@ -237,7 +237,7 @@ END;
 /
 show errors;
 ```
-<button onclick="copyCode(4)">copy</button>
+<button onclick="copyCode(7)">copy</button>
 ```sql
 CREATE OR REPLACE PROCEDURE cs_create_job(v_job_id integer) AS $$
 DECLARE
