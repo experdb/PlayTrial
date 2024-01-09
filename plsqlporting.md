@@ -51,6 +51,7 @@ select cs_fmt_browser_version('eXperDB','v15');
 * 오라클의 동적 쿼리구현 구문 EXECUTE IMMEDIATE 는 PostgreSQL 에서 EXECUTE로 표현된다.<br>
 * 프로시져 실행은 구문만 다르며 사용방법은 동일하다.<br>
 
+<button onclick="copyCode(2)" disabled>copy</button>
 ```sql
 CREATE OR REPLACE PROCEDURE cs_update_referrer_type_proc IS
  CURSOR referrer_keys IS
@@ -119,6 +120,7 @@ call cs_update_referrer_type_proc();
 * Oracle 내부함수 instr()를 postgrSQL의 position함수로 대체 가능하다.<br>
 * 함수 호출방식으로 구현한다.
 &nbsp;
+<button onclick="copyCode(4)" disabled>copy</button>
 ```sql
 CREATE OR REPLACE PROCEDURE cs_parse_url(
     v_url IN VARCHAR2,
@@ -210,6 +212,7 @@ SELECT * FROM cs_parse_url('http://foobar.com/query.cgi?baz');
 * 읽기 트랜잭션만 동시에 수행 가능하며 Oracle의 사용자 정의 error를 PostgreSQL에서는 비슷하게 동작하는 RAISE EXCEPTION 를 통해서 구현 가능하다.<br>
 * EXCEPTION 절은 동일하게 지원되며, PL/pgSQL 에서 지원하는 EXCEPTION 명은 Oracle 과 다르지만 동일한 기능을 대부분 지원한다.<br>
 
+<button onclick="copyCode(6)" disabled>copy</button>
 ```sql
 CREATE OR REPLACE PROCEDURE cs_create_job(v_job_id IN INTEGER) IS
     a_running_job_count INTEGER;
