@@ -105,7 +105,7 @@
 ```
 
 &nbsp;
-* CONNECT BY START WITH (Oracle) -> WITH RECURSIVE CTE (PostgreSQL)
+* CONNECT BY START WITH (Oracle) -> WITH RECURSIVE CTE (PostgreSQL)  
 <button onclick="copyCode(12)" disabled>copy</button>
 ```sql 
 SELECT E.*,LEVEL
