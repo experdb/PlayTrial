@@ -118,8 +118,8 @@ call cs_update_referrer_type_proc();
 &nbsp;
 * PL/pgSQL의 현재 버전의 프로시져에서는 OUT 인수를 지원하지 않으나 함수로 동일하게 구현 가능하다.<br>
 * Oracle 내부함수 instr()를 postgrSQL의 position함수로 대체 가능하다.<br>
-* 함수 호출방식으로 구현한다.
-&nbsp;
+* 함수 호출방식으로 구현한다.<br>
+
 <button onclick="copyCode(4)" disabled>copy</button>
 ```sql
 CREATE OR REPLACE PROCEDURE cs_parse_url(
