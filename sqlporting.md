@@ -113,8 +113,8 @@ FROM EMPLOYEES E
 START WITH MANAGER_ID IS NULL
 CONNECT BY PRIOR EMPLOYEE_ID = MANAGER_ID;
 ```
-&nbsp;
-<button onclick="copyCode(13)">copy2</button>
+  
+<button onclick="copyCode(13)">copy</button>
 ```sql 
  WITH RECURSIVE A AS ( 
  SELECT E.*, 1 LEVEL
